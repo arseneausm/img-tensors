@@ -1,5 +1,5 @@
 from PIL import Image
-from datetime import datetime
+import time
 import numpy as np
 import random
 
@@ -9,7 +9,7 @@ def gif_gen (m, n, f):
 	# let m and n be the standard notation for the size of a matrix and let f be the frames of the desired video.
 
 	frames = []
-	path = 'data/' + str(datetime.now()) + '.gif'
+	path = 'data/' + str(time.strftime("%Y%m%d-%H%M%S")) + '.gif'
 
 	for i in range(f):
 		vals = np.random.rand(m, n, 3) * 255
